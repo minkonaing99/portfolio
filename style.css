@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans", sans-serif;
+}
+
+:root {
+    --primary-color: #4f674f;
+    --secondary-color: #fff;
+    --star-color: #C0E0DE;
+
+    --fs-xl: 3rem;
+    --fs-lg: 2rem;
+    --fs-md: 1.5rem;
+    --fs-sm: 1.25rem;
+
+    --space-xs: 0.5rem;
+    --space-sm: 0.75rem;
+    --space-md: 1rem;
+    --space-lg: 1.25rem;
+    --space-xl: 2rem;
+}
+
+/* Colors and fonts */
+body,
+html {
+    color: var(--primary-color);
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+/* Remove scroll container specific scroll styles */
+.scroll-container {
+    height: auto;
+    overflow: visible;
+}
+
+.paragraph-font {
+    font-family: "Noto Sans", sans-serif;
+    color: var(--primary-color);
+    font-weight: 500;
+    text-align: justify;
+}
+
+.heading-font {
+    font-family: "Hanken Grotesk", sans-serif;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 600;
+
+}
+
+.title {
+    font-family: "Hanken Grotesk", sans-serif;
+    font-weight: 700;
+    text-align: left;
+    font-size: 1.1rem;
+    margin-bottom: .2rem;
+}
+
+.description {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    text-align: justify;
+    font-size: 0.9rem;
+}
+
+
+.bg-main {
+    background-color: var(--primary-color);
+}
+
+/* Navbar links */
+.navbar-nav .nav-link {
+    color: white !important;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: #a8c89b !important;
+}
+
+/* Each section snaps at start */
+.hero-section {
+    padding-top: 56px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    margin: 0 !important;
+    scroll-snap-align: start;
+}
+
+/* ...rest of your styles remain unchanged... */
+
+.linebreak {
+    width: 150px;
+    height: 1px;
+    background-color: var(--primary-color);
+}
+
+.skill-container {
+    width: 300px;
+    margin-bottom: 15px;
+}
+
+.progress-bar {
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #334E3B;
+    width: 0;
+    transition: width 1s ease;
+}
+
+.framework-icon-box {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.framework-icon-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.project-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    background-color: var(--secondary-color);
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    /* slightly smaller than 1.2 for better UX */
+    transition: transform 0.3s ease;
+    /* smooth animation */
+}
+
+
+.project-card img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+
+
+.social-icons a {
+    margin: 0 10px;
+    transition: transform 0.2s;
+}
+
+.social-icons a img {
+    width: 50px;
+    height: 50px;
+    max-width: 100%;
+    max-height: 100%;
+    fill: white;
+    color: white;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+.box {
+    height: 80px;
+}
+
+
+/* Nav item styles */
+.custom-nav-item {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+/* Underline animation */
+.custom-nav-item::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: var(--star-color);
+    border-radius: 50px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s linear;
+}
+
+.custom-nav-item:hover::before {
+    transform: scaleX(1);
+}
+
+.custom-nav-item:hover {
+    color: var(--star-color);
+}
+
+
+
+.logo {
+    height: 30px;
+    width: auto;
+}
+
+.btn {
+    border-radius: 18px;
+}
+
+
+
+/* footer component */
+.footer-text {
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.footer-background {
+    background-color: var(--primary-color);
+}

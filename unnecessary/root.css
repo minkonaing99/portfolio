@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans", sans-serif;
+}
+
+:root {
+    --primary-color: #4f674f;
+    --secondary-color: #ffe5d5;
+    --star-color: #C0E0DE;
+
+    --fs-xl: 3rem;
+    --fs-lg: 2rem;
+    --fs-md: 1.5rem;
+    --fs-sm: 1.25rem;
+
+    --space-xs: 0.5rem;
+    --space-sm: 0.75rem;
+    --space-md: 1rem;
+    --space-lg: 1.25rem;
+    --space-xl: 2rem;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Make main area scrollable for snapping */
+main {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+/* Hero / full screen sections */
+.hero-section {
+    padding-top: 56px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
+    background: wheat;
+}
+
+/* Navbar container */
+.custom-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    height: 56px;
+    padding: 0 var(--space-xl);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    /* ensure it stays above all other content */
+}
+
+/* Logo image */
+.logo {
+    height: 80%;
+    width: auto;
+    display: block;
+    object-fit: contain;
+    padding: 0;
+    margin: 0 auto;
+}
+
+/* Ensure logo is vertically centered */
+.custom-navbar a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+/* Navigation list */
+.custom-nav-menu {
+    list-style: none;
+    display: flex;
+    gap: var(--space-lg);
+}
+
+/* Nav item styles */
+.custom-nav-item {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+/* Underline animation */
+.custom-nav-item::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: var(--star-color);
+    border-radius: 50px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s linear;
+}
+
+.custom-nav-item:hover::before {
+    transform: scaleX(1);
+}
+
+.custom-nav-item:hover {
+    color: var(--star-color);
+}
+
+/* Contact button */
+.btn-custom {
+    background-color: var(--primary-color);
+    color: white;
+    border: 1.5px solid var(--secondary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}

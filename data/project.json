@@ -1,0 +1,20 @@
+[
+    {
+        "project_title": "Student Management System",
+        "description": "Authentication, profile and database management, blogging",
+        "photo_dir": "assets/images/studentManagementSystem.png",
+        "alt": "student management system"
+    },
+    {
+        "project_title": "Personal Expense Tracker",
+        "description": "Expense Tracking with chart and income tracking, Give out the daily total and Monthly Total Expenses",
+        "photo_dir": "assets/images/personalExpenseTracker.png",
+        "alt": "personal expense tracker"
+    },
+    {
+        "project_title": "Network Abnomaly Detection",
+        "description": "Authentication, profile and database management, blogging",
+        "photo_dir": "assets/images/networkAnomalyDetection.png",
+        "alt": "network anomaly detection"
+    }
+]
