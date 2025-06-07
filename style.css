@@ -46,11 +46,12 @@ html {
     color: var(--primary-color);
     font-weight: 500;
     text-align: justify;
+    padding-bottom: 0;
 }
 
 .heading-font {
     font-family: "Hanken Grotesk", sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--primary-color);
     text-transform: uppercase;
 }
@@ -152,6 +153,8 @@ a {
     text-align: center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     background-color: var(--secondary-color);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+
 }
 
 .project-card:hover {
@@ -159,7 +162,11 @@ a {
     /* slightly smaller than 1.2 for better UX */
     transition: transform 0.3s ease;
     /* smooth animation */
+    background-color: #fcfbfb;
+
 }
+
+
 
 
 .project-card img {
@@ -238,7 +245,6 @@ a {
 }
 
 
-
 /* footer component */
 .footer-text {
     color: var(--secondary-color);
@@ -247,4 +253,110 @@ a {
 
 .footer-background {
     background-color: var(--primary-color);
+}
+
+.animation-container {
+    display: inline-block;
+}
+
+.typing {
+    padding-right: 3px;
+    border-right: 2px solid black;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+        typing 2s steps(20, end) forwards,
+        blinkCursor .8s step-end infinite;
+    animation-direction: alternate;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blinkCursor {
+
+    0%,
+    100% {
+        border-color: black;
+    }
+
+    50% {
+        border-color: transparent;
+    }
+}
+
+.date {
+    padding-top: 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: grey;
+}
+
+.m0 {
+    margin: 0;
+}
+
+.m1 {
+    margin-bottom: .2rem;
+}
+
+
+/* Initial state: invisible and shifted down */
+.hero-section .show {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+/* When the element is in view, make it visible and bring it to the original position */
+.hero-section .show.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.showcase_model {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2);
+    width: 90vw;
+    max-width: 900px;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    position: relative;
+}
+
+.project_model {
+    max-height: 70vh;
+    overflow-y: auto;
+    padding-right: 1rem;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    z-index: 2;
+    background: #fff;
 }

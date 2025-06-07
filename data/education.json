@@ -6,7 +6,7 @@
     },
     {
         "position": "Inventory Management",
-        "company": "New Sony Electric Store",
+        "company": "New Sony Electric Store (Lashio)",
         "duration": "December 2021 - March 2022"
     },
     {
@@ -18,5 +18,10 @@
         "position": "Higher Diploma in Infrastructure and Networks",
         "company": "Auston Institute of Management, Myanmar",
         "duration": "2023 - 2024"
+    },
+    {
+        "position": "Wallstreet English (level-13)",
+        "company": "Wallstreet English, Myanmar",
+        "duration": "2022 - 2023"
     }
 ]
