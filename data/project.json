@@ -28,5 +28,11 @@
         "description": "Authentication, profile and database management, blogging",
         "photo_dir": "assets/images/networkAnomalyDetection.png",
         "alt": "network anomaly detection"
+    },
+    {
+        "project_title": "Portfolio Design",
+        "description": "Html and CSS",
+        "photo_dir": "assets/projects/portfolio_znisa.png",
+        "alt": "network anomaly detection"
     }
 ]
